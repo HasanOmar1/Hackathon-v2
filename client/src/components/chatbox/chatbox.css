@@ -1,0 +1,38 @@
+.big-container{
+
+  margin-left: 15%;
+
+}
+
+.answer{
+  background-color: #343839;
+  border-radius: 10px;
+  color: white;
+  padding: 5px 10px;
+}
+
+.write-input:focus{
+  outline: none;
+}
+.welcoming{
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.logged-user{
+  color: white;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.roles{
+  border-radius: 10px;
+  padding: 10px;
+}
+@media (min-width:600px) {
+  .responsive{
+    padding-left: 70px;
+  }
+  
+}
