@@ -27,7 +27,7 @@ function LoginProvider({ children }) {
   const createUser = async (user) => {
     try {
       const res = await axios.post(
-        "https://hackathon-backend-biy0.onrender.com/api/v1/users/create",
+        `${import.meta.env.VITE_BACKEND}api/v1/users/create`,
         user
       );
       console.log(res.data);
