@@ -36,12 +36,15 @@ export default function Chatbox() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/chat", {
-        message: userInput,
-        language: "english",
-        description: descriptionInput,
-        date: dateInput,
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND}/api/v1/chat`,
+        {
+          message: userInput,
+          language: "english",
+          description: descriptionInput,
+          date: dateInput,
+        }
+      );
 
       // Update chat history with user input and AI response
       setChatHistory((prevHistory) => [

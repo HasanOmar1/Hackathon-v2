@@ -1,9 +1,4 @@
 import getOpenAiInstance from "../openAI/openAI.js";
-import fs from "fs/promises";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export const chat = async (req, res) => {
   const userInput = req.body.message;
@@ -13,7 +8,6 @@ export const chat = async (req, res) => {
 
   const systemMessage = {
     role: "system",
-    /* Legal Bot, I need assistance in drafting a concise description for my legal case. The case involves ${descriptionInput}. Please include key details such as ${dateInput}, and any other information crucial to understanding the case. Additionally, highlight the main legal issues at play and any specific laws or regulations applicable. Your help in creating a clear and informative case description is appreciated. */
     content: `I need assistance in drafting a concise description for my legal case. The case involves ${descriptionInput}.
      Please include key details such as ${dateInput}, 
      and any other information crucial to understanding the case. 

@@ -11,7 +11,7 @@ function LoginProvider({ children }) {
   const logIn = async (user) => {
     try {
       const res = await axios.post(
-        "https://hackathon-backend-biy0.onrender.com/api/v1/users/login",
+        `${import.meta.env.VITE_BACKEND}/api/v1/users/login`,
         user
       );
       console.log(res.data);
